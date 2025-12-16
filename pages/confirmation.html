@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed — NOIR STREET</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/shop.css">
+  <link rel="stylesheet" href="../css/pages/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      NOIR STREET
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="mens.html">Mens</a></li>
+      <li><a href="womens.html">Womens</a></li>
+      <li><a href="sale.html">Sale</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="profile.html" class="nav-icon-btn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="10" cy="6" r="4"/><path d="M2 20v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Confirmation Page -->
+  <main class="confirmation-page">
+    <div class="confirmation-container">
+      <div class="confirmation-icon">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="3">
+          <path d="M8 20l8 8 16-16"/>
+        </svg>
+      </div>
+      <h1 class="confirmation-title">Order Confirmed!</h1>
+      <p class="confirmation-subtitle">Thank you for your purchase. We've sent a confirmation email with your order details and tracking information.</p>
+      
+      <div class="confirmation-order">
+        <div class="confirmation-order-header">
+          <div>
+            <div class="confirmation-order-label">Order Number</div>
+            <div class="confirmation-order-value" id="orderNumber">NS-XXXXXXX</div>
+          </div>
+          <div>
+            <div class="confirmation-order-label">Order Date</div>
+            <div class="confirmation-order-value" id="orderDate">Dec 12, 2025</div>
+          </div>
+          <div>
+            <div class="confirmation-order-label">Total</div>
+            <div class="confirmation-order-value" id="orderTotal">$0</div>
+          </div>
+        </div>
+        <p style="color: var(--muted); font-size: 14px;">Estimated delivery: 5-7 business days</p>
+      </div>
+      
+      <div class="confirmation-actions">
+        <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+        <a href="profile.html" class="btn btn-secondary">View Orders</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const order = JSON.parse(localStorage.getItem('noirLastOrder'));
+      if (order) {
+        document.getElementById('orderNumber').textContent = order.id;
+        document.getElementById('orderDate').textContent = order.date;
+        document.getElementById('orderTotal').textContent = `$${order.total}`;
+      }
+    });
+  </script>
+</body>
+</html>

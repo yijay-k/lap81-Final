@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile — NOIR STREET</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/shop.css">
+  <link rel="stylesheet" href="../css/pages/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      NOIR STREET
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="mens.html">Mens</a></li>
+      <li><a href="womens.html">Womens</a></li>
+      <li><a href="sale.html">Sale</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="profile.html" class="nav-icon-btn" style="color: var(--accent);">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="10" cy="6" r="4"/><path d="M2 20v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+        </svg>
+      </a>
+      <button class="cart-btn" id="cartBtn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 6h12l-1.5 9h-9L6 6zm0 0L5 3H2"/>
+          <circle cx="9" cy="19" r="1"/><circle cx="16" cy="19" r="1"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Profile Page -->
+  <main class="profile-page">
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="profile-avatar">
+          <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="24" cy="16" r="10"/><path d="M4 48v-4a16 16 0 0 1 16-16h8a16 16 0 0 1 16 16v4"/>
+          </svg>
+        </div>
+        <div class="profile-info">
+          <h1 class="profile-name" id="profileName">John Doe</h1>
+          <p class="profile-email" id="profileEmail">john@example.com</p>
+        </div>
+        <button class="btn btn-secondary" onclick="logout()">Logout</button>
+      </div>
+      
+      <div class="profile-tabs">
+        <button class="profile-tab active" data-tab="details">Account Details</button>
+        <button class="profile-tab" data-tab="orders">Orders</button>
+        <button class="profile-tab" data-tab="addresses">Addresses</button>
+      </div>
+      
+      <div class="profile-section" id="profileContent">
+        <h3 class="profile-section-title">Account Details</h3>
+        <form id="profileForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-input" value="John">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-input" value="Doe">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" value="john@example.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input type="tel" class="form-input" placeholder="+1 (555) 000-0000">
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Cart</h3>
+      <button class="cart-close" id="cartClose">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary btn-full">Checkout</a>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/controllers/cart-controller.js"></script>
+  <script>
+    // Check if user is logged in
+    const user = JSON.parse(localStorage.getItem('noirUser'));
+    if (!user) {
+      window.location.href = 'login.html';
+    }
+    
+    // Tab switching
+    document.querySelectorAll('.profile-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.profile-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+    
+    function logout() {
+      localStorage.removeItem('noirUser');
+      window.location.href = 'login.html';
+    }
+    
+    document.getElementById('profileForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Profile updated!');
+    });
+  </script>
+</body>
+</html>

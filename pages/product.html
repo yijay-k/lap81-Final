@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — NOIR STREET</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/shop.css">
+  <link rel="stylesheet" href="../css/pages/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .product-page { padding: 140px 48px 80px; }
+    .product-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 60px; }
+    .product-gallery { flex: 1.2; }
+    .product-main-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--radius); margin-bottom: 16px; }
+    .product-thumbs { display: flex; gap: 12px; }
+    .product-thumb { width: 80px; height: 100px; object-fit: cover; border-radius: 8px; cursor: pointer; opacity: 0.6; transition: opacity 0.3s; }
+    .product-thumb:hover, .product-thumb.active { opacity: 1; }
+    .product-details { flex: 1; }
+    .product-details-name { font-family: "Oswald", sans-serif; font-size: 36px; font-weight: 700; letter-spacing: -2px; margin-bottom: 8px; }
+    .product-details-price { font-size: 24px; font-weight: 600; color: var(--accent); margin-bottom: 20px; }
+    .product-details-desc { color: var(--muted); line-height: 1.7; margin-bottom: 32px; }
+    .size-selector { margin-bottom: 24px; }
+    .size-options { display: flex; gap: 12 }
+    .size-option { padding: 12px 24px; border: 1px solid var(--muted); border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; }
+    .size-option:hover, .size-option.selected { background-color: var(--accent); color: #fff; }
+    .add-to-cart-btn { padding: 16px 32px; font-size: 18px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; }
+    .add-to-cart-btn { background-color: var(--accent); color: #fff; }
+    .add-to-cart-btn:hover { background-color: #000; }
+  </style>
+</head>
+<body>
+  <div class="product-page">
+    <div class="product-container">
+      <div class="product-gallery">
+        <img src="https://via.placeholder.com/300x400" alt="Product Image" class="product-main-img">
+        <div class="product-thumbs">
+          <img src="https://via.placeholder.com/300x400" alt="Product Thumb" class="product-thumb active">
+          <img src="https://via.placeholder.com/300x400" alt="Product Thumb" class="product-thumb">
+          <img src="https://via.placeholder.com/300x400" alt="Product Thumb" class="product-thumb">
+        </div>
+      </div>
+      <div class="product-details">
+        <h1 class="product-details-name">Product Name</h1>
+        <p class="product-details-price">$99.99</p>
+        <p class="product-details-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies lacinia, nunc nisl lacinia nunc, sit amet ultricies nisl nisl sit amet nisl.</p>
+        <div class="size-selector">
+          <h3 class="size-selector-title">Size</h3>
+          <div class="size-options">
+            <button class="size-option">S</button>
+            <button class="size-option">M</button>
+            <button class="size-option">L</button>
+            <button class="size-option">XL</button>
+          </div>
+        </div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

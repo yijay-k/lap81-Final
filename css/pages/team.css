@@ -1,0 +1,96 @@
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: var(--bg);
+  text-decoration: none;
+  color: inherit;
+  transition: background var(--transition-med);
+}
+
+.team-card:hover {
+  background: var(--surface);
+}
+
+.team-img-wrapper {
+  aspect-ratio: 1;
+  overflow: hidden;
+  filter: grayscale(100%);
+  transition: filter var(--transition-med);
+}
+
+.team-card:hover .team-img-wrapper {
+  filter: grayscale(0%);
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-info {
+  padding: 32px;
+  text-align: center;
+}
+
+.team-name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.team-role {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* CV Page */
+.cv-page {
+  padding: 160px 48px 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cv-header {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+  margin-bottom: 80px;
+}
+
+.cv-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  filter: grayscale(100%);
+}
+
+.cv-name {
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.cv-role {
+  font-size: 20px;
+  color: var(--accent);
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

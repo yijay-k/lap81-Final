@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIR STREET — Premium Streetwear</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="stylesheet" href="css/pages/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="logo">
+      <span class="logo-dot"></span>
+      NOIR STREET
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/shop.html">Shop</a></li>
+      <li><a href="pages/mens.html">Mens</a></li>
+      <li><a href="pages/womens.html">Womens</a></li>
+      <li><a href="pages/sale.html">Sale</a></li>
+      <li><a href="pages/team.html">Team</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="pages/profile.html" class="nav-icon-btn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="10" cy="6" r="4"/><path d="M2 20v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+        </svg>
+      </a>
+      <button class="cart-btn" id="cartBtn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 6h12l-1.5 9h-9L6 6zm0 0L5 3H2"/>
+          <circle cx="9" cy="19" r="1"/><circle cx="16" cy="19" r="1"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="float-el float-el-1"></div>
+    <div class="float-el float-el-2"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-label">New Season 2025</span>
+        <h1 class="hero-headline">
+          DEFINE YOUR
+          <span>STREET IDENTITY</span>
+        </h1>
+        <p class="hero-desc">
+          Premium streetwear crafted for those who refuse to blend in. 
+          Limited drops, unlimited expression.
+        </p>
+        <div class="hero-actions">
+          <a href="pages/shop.html" class="btn btn-primary">
+            Shop Now
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 8h10m-4-4 4 4-4 4"/>
+            </svg>
+          </a>
+          <a href="pages/sale.html" class="btn btn-secondary">View Sale</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-img-wrapper" id="heroImg">
+          <img src="/placeholder.svg?height=600&width=500" alt="Featured streetwear" class="hero-img">
+          <div class="hero-gloss"></div>
+          <div class="hero-badge">
+            <div class="hero-badge-icon">24</div>
+            <div class="hero-badge-text">
+              <strong>Limited Edition</strong>
+              Items Available
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">Free Shipping Over $150</span>
+      <span class="marquee-item">New Arrivals Weekly</span>
+      <span class="marquee-item">Exclusive Members Access</span>
+      <span class="marquee-item">Worldwide Delivery</span>
+      <span class="marquee-item">Free Shipping Over $150</span>
+      <span class="marquee-item">New Arrivals Weekly</span>
+      <span class="marquee-item">Exclusive Members Access</span>
+      <span class="marquee-item">Worldwide Delivery</span>
+    </div>
+  </div>
+
+  <!-- Featured Products -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Featured <span>Drops</span></h2>
+      <a href="pages/shop.html" class="section-link">
+        View All
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 8h10m-4-4 4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
+    <div class="product-grid" id="featuredProducts"></div>
+  </section>
+
+  <!-- Shop By Gender -->
+  <section class="section categories">
+    <div class="section-header">
+      <h2 class="section-title">Shop by <span>Category</span></h2>
+    </div>
+    <div class="gender-grid">
+      <a href="pages/mens.html" class="gender-card">
+        <img src="/placeholder.svg?height=500&width=400" alt="Mens" class="gender-img">
+        <div class="gender-overlay">
+          <h3 class="gender-name">Mens</h3>
+          <span class="gender-cta">Shop Collection</span>
+        </div>
+      </a>
+      <a href="pages/womens.html" class="gender-card">
+        <img src="/placeholder.svg?height=500&width=400" alt="Womens" class="gender-img">
+        <div class="gender-overlay">
+          <h3 class="gender-name">Womens</h3>
+          <span class="gender-cta">Shop Collection</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Premium Quality</h3>
+        <p class="feature-desc">Every piece crafted with premium materials for lasting comfort and style.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Free Shipping</h3>
+        <p class="feature-desc">Complimentary worldwide shipping on all orders over $150.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0z"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Limited Drops</h3>
+        <p class="feature-desc">Exclusive releases every week. Once they're gone, they're gone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section newsletter">
+    <div class="newsletter-inner">
+      <h2 class="newsletter-title">Join The Club</h2>
+      <p class="newsletter-desc">Get early access to drops, exclusive discounts, and street style inspiration.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" class="form-input" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-dot"></span>
+            NOIR STREET
+          </div>
+          <p class="footer-desc">Premium streetwear for those who define their own style. Based in NYC, shipping worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Shop</h4>
+          <ul class="footer-links">
+            <li><a href="pages/shop.html">All Products</a></li>
+            <li><a href="pages/mens.html">Mens</a></li>
+            <li><a href="pages/womens.html">Womens</a></li>
+            <li><a href="pages/sale.html">Sale</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/team.html">Meet The Team</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Account</h4>
+          <ul class="footer-links">
+            <li><a href="pages/login.html">Login</a></li>
+            <li><a href="pages/signup.html">Sign Up</a></li>
+            <li><a href="pages/profile.html">My Profile</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 NOIR STREET. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Cart</h3>
+      <button class="cart-close" id="cartClose">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <a href="pages/checkout.html" class="btn btn-primary btn-full">Checkout</a>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/controllers/cart-controller.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

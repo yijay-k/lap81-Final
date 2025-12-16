@@ -1,0 +1,62 @@
+/* Global CSS - Modern Streetwear Aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+
+:root {
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --color-bg: #0a0a0a;
+  /* Deep matte black */
+  --color-text: #f0f0f0;
+  /* Off-white for contrast */
+  --color-accent: #eeff00;
+  /* Acid yellow for the "banana" pop */
+  --color-concrete: #1f1f1f;
+  /* Dark grey for secondary elements */
+  --spacing-base: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  /* Tight tracking for that bold streetwear look */
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-base);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 0;
+  /* Sharp edges for streetwear */
+}

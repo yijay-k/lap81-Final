@@ -62,6 +62,70 @@
       </div>
     </div>
   </div>
-</body>
-</html>
 
+  <script src="../js/data.js"></script>
+  <script src="../js/controllers/cart-controller.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search)
+      const id = parseInt(params.get('id'), 10)
+      const product = products.find(p => p.id === id)
+      const container = document.querySelector('.product-container')
+      if (!product) {
+        container.innerHTML = '<p>Product not found.</p>'
+        return
+      }
+
+      const mainImg = document.querySelector('.product-main-img')
+      mainImg.src = product.image || BLANK_IMAGE
+      mainImg.alt = product.name || 'Product Image'
+
+      // Thumbnails
+      const thumbsDiv = document.querySelector('.product-thumbs')
+      const imgs = (product.images && product.images.length) ? product.images : [product.image]
+      thumbsDiv.innerHTML = imgs.slice(0, 6).map((src, i) => `
+        <img src="${src || BLANK_IMAGE}" alt="${product.name} thumb" class="product-thumb ${i === 0 ? 'active' : ''}" data-src="${src || BLANK_IMAGE}">
+      `).join('')
+
+      thumbsDiv.querySelectorAll('.product-thumb').forEach((t) => {
+        t.addEventListener('click', () => {
+          thumbsDiv.querySelectorAll('.product-thumb').forEach(x => x.classList.remove('active'))
+          t.classList.add('active')
+          mainImg.src = t.dataset.src
+        })
+      })
+
+      // Details
+      document.querySelector('.product-details-name').textContent = product.name
+      const priceEl = document.querySelector('.product-details-price')
+      if (product.salePrice) {
+        priceEl.innerHTML = `<span class="product-price-original">$${product.price}</span> <span class="product-price-sale">$${product.salePrice}</span>`
+      } else {
+        priceEl.textContent = `$${product.price}`
+      }
+      document.querySelector('.product-details-desc').textContent = product.description || ''
+
+      // Sizes
+      const sizeOptions = document.querySelector('.size-options')
+      const sizes = product.sizes && product.sizes.length ? product.sizes : ['One Size']
+      sizeOptions.innerHTML = sizes.map(s => `<button class="size-option" data-size="${s}">${s}</button>`).join('')
+      let selectedSize = sizes[0]
+      sizeOptions.querySelectorAll('.size-option').forEach((btn) => {
+        if (btn.dataset.size === selectedSize) btn.classList.add('selected')
+        btn.addEventListener('click', () => {
+          sizeOptions.querySelectorAll('.size-option').forEach(b => b.classList.remove('selected'))
+          btn.classList.add('selected')
+          selectedSize = btn.dataset.size
+        })
+      })
+
+      // Add to cart
+      const addBtn = document.querySelector('.add-to-cart-btn')
+      addBtn.addEventListener('click', () => {
+        CartController.addItem(product, selectedSize, 1)
+        addBtn.textContent = 'Added'
+        setTimeout(() => (addBtn.textContent = 'Add to Cart'), 1200)
+      })
+    })
+  </script>

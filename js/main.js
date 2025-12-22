@@ -22,6 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Scroll animations
   initScrollAnimations()
+
+  // Set correct active nav link based on URL (keeps tabs consistent across pages)
+  const setActiveNavLink = () => {
+    const current = location.pathname.split('/').pop() || 'index.html'
+    document.querySelectorAll('.nav-links a').forEach((a) => {
+      const href = a.getAttribute('href').split('/').pop()
+      if (href === current) {
+        a.classList.add('active')
+      } else {
+        a.classList.remove('active')
+      }
+    })
+  }
+
+  setActiveNavLink()
 })
 
 // Create product card HTML

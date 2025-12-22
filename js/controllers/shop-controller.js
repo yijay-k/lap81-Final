@@ -1,13 +1,11 @@
 // Shop Controller
-const products = [] // Declare the products variable
-const createProductCard = (product) => {
-  // Function implementation here
-  return `<div class="product-card">
-            <h2>${product.name}</h2>
-            <p>${product.description}</p>
-            <p>Price: $${product.price}</p>
-          </div>`
-} // Declare the createProductCard function
+// Use the global `products` array (from js/data.js) and the shared `createProductCard` in main.js.
+// Avoid redeclaring products or createProductCard here so the Shop uses the single source of truth.
+
+// If you'd like a custom short card for the shop, we can use the global one. Otherwise we could
+// define a specialized `renderShopCard(product)` function here — for now the controller will
+// assume `createProductCard(product)` is available globally.
+
 
 const ShopController = {
   currentCategory: "all",

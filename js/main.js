@@ -1,6 +1,6 @@
 // Main JavaScript
-let products // Declare products variable
-let CartController // Declare CartController variable
+// Globals: `products` (from `js/data.js`) and `CartController` (from `js/controllers/cart-controller.js`)
+// are provided by other scripts and should not be re-declared here.
 
 document.addEventListener("DOMContentLoaded", () => {
   // Render featured products on homepage

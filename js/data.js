@@ -123,24 +123,24 @@ const categories = [
 // Products from assets/images/products/ — automatically added here
 // Each product includes: id, name, price, category, image (relative path from pages/)
 products.push(
-  { id: 13, name: "Beanie", category: "Accessories", price: 28, image: "../assets/images/products/lap81-beanie.png" },
-  { id: 14, name: "Black Hoodie", category: "Hoodies", price: 150, image: "../assets/images/products/lap81-black-hoodie.png" },
-  { id: 16, name: "Bucket Hat", category: "Accessories", price: 45, image: "../assets/images/products/lap81-bucket-hat.png" },
-  { id: 17, name: "Cap", category: "Accessories", price: 35, image: "../assets/images/products/lap81-cap.png" },
-  { id: 18, name: "Cropped Top", category: "T-Shirts", gender: "womens", price: 60, image: "../assets/images/products/lap81-crop-top.png" },
-  { id: 19, name: "Street Jacket", category: "Outerwear", price: 220, image: "../assets/images/products/lap81-jacket.png" },
-  { id: 20, name: "Denim Jacket", category: "Outerwear", price: 180, image: "../assets/images/products/lap81-jeans-jacket.png" },
-  { id: 23, name: "Men's Tank Top", category: "T-Shirts", gender: "mens", price: 40, image: "../assets/images/products/lap81-men-tank-top.png" },
-  { id: 24, name: "Phone Case", category: "Accessories", price: 25, image: "../assets/images/products/lap81-phone-case.png" },
-  { id: 25, name: "School Bag", category: "Accessories", price: 85, image: "../assets/images/products/lap81-school-bag.png" },
-  { id: 26, name: "Skateboard", category: "Accessories", price: 120, image: "../assets/images/products/lap81-skateboard.png" },
-  { id: 27, name: "Slippers", category: "Accessories", price: 30, image: "../assets/images/products/lap81-slippers.png" },
-  { id: 28, name: "Socks Pack", category: "Accessories", price: 12, image: "../assets/images/products/lap81-socks.png" },
-  { id: 29, name: "Sweat Pants", category: "Pants", price: 95, image: "../assets/images/products/lap81-sweat-pants.png" },
-  { id: 30, name: "Sweat Shirt", category: "Hoodies", price: 110, image: "../assets/images/products/lap81-sweat-shirt.png" },
-  { id: 31, name: "Tote Bag", category: "Accessories", price: 40, image: "../assets/images/products/lap81-tote-bag.png" },
-  { id: 32, name: "Classic Tee", category: "T-Shirts", price: 50, image: "../assets/images/products/lap81-tshirt.png" },
-  { id: 33, name: "Wallet", category: "Accessories", price: 55, image: "../assets/images/products/lap81-wallet.png" },
-  { id: 35, name: "Women's Tank Top", category: "T-Shirts", gender: "womens", price: 42, image: "../assets/images/products/lap81-women-tank-top.png" }
+  { id: 1, name: "Beanie", category: "Accessories", price: 28, image: "../assets/images/products/lap81-beanie.png" },
+  { id: 2, name: "Black Hoodie", category: "Hoodies", price: 150, image: "../assets/images/products/lap81-black-hoodie.png" },
+  { id: 3, name: "Bucket Hat", category: "Accessories", price: 45, image: "../assets/images/products/lap81-bucket-hat.png" },
+  { id: 4, name: "Cap", category: "Accessories", price: 35, image: "../assets/images/products/lap81-cap.png" },
+  { id: 5, name: "Cropped Top", category: "T-Shirts", gender: "womens", price: 60, image: "../assets/images/products/lap81-crop-top.png" },
+  { id: 6, name: "Street Jacket", category: "Outerwear", price: 220, image: "../assets/images/products/lap81-jacket.png" },
+  { id: 7, name: "Denim Jacket", category: "Outerwear", price: 180, image: "../assets/images/products/lap81-jeans-jacket.png" },
+  { id: 8, name: "Men's Tank Top", category: "T-Shirts", gender: "mens", price: 40, image: "../assets/images/products/lap81-men-tank-top.png" },
+  { id: 9, name: "Phone Case", category: "Accessories", price: 25, image: "../assets/images/products/lap81-phone-case.png" },
+  { id: 10, name: "School Bag", category: "Accessories", price: 85, image: "../assets/images/products/lap81-school-bag.png" },
+  { id: 11, name: "Skateboard", category: "Accessories", price: 120, image: "../assets/images/products/lap81-skateboard.png" },
+  { id: 12, name: "Slippers", category: "Accessories", price: 30, image: "../assets/images/products/lap81-slippers.png" },
+  { id: 13, name: "Socks Pack", category: "Accessories", price: 12, image: "../assets/images/products/lap81-socks.png" },
+  { id: 14, name: "Sweat Pants", category: "Pants", price: 95, image: "../assets/images/products/lap81-sweat-pants.png" },
+  { id: 15, name: "Sweat Shirt", category: "Hoodies", price: 110, image: "../assets/images/products/lap81-sweat-shirt.png" },
+  { id: 16, name: "Tote Bag", category: "Accessories", price: 40, image: "../assets/images/products/lap81-tote-bag.png" },
+  { id: 17, name: "Classic Tee", category: "T-Shirts", price: 50, image: "../assets/images/products/lap81-tshirt.png" },
+  { id: 18, name: "Wallet", category: "Accessories", price: 55, image: "../assets/images/products/lap81-wallet.png" },
+  { id: 19, name: "Women's Tank Top", category: "T-Shirts", gender: "womens", price: 42, image: "../assets/images/products/lap81-women-tank-top.png" }
 )
 

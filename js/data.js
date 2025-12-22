@@ -144,3 +144,6 @@ products.push(
   { id: 19, name: "Women's Tank Top", category: "T-Shirts", gender: "womens", price: 42, image: "../assets/images/products/lap81-women-tank-top.png" }
 )
 
+// Unisex collection (contains references to existing products so they remain in their original categories)
+const unisex = products.filter(p => [1,2,3,4,6,7,9,10,11,12,13,14,15,16,17,18].includes(p.id))
+

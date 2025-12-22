@@ -127,10 +127,10 @@ products.push(
   { id: 14, name: "Black Hoodie", category: "Hoodies", price: 150, image: "../assets/images/products/lap81-black-hoodie.png" },
   { id: 16, name: "Bucket Hat", category: "Accessories", price: 45, image: "../assets/images/products/lap81-bucket-hat.png" },
   { id: 17, name: "Cap", category: "Accessories", price: 35, image: "../assets/images/products/lap81-cap.png" },
-  { id: 18, name: "Cropped Top", category: "T-Shirts", price: 60, image: "../assets/images/products/lap81-crop-top.png" },
+  { id: 18, name: "Cropped Top", category: "T-Shirts", gender: "womens", price: 60, image: "../assets/images/products/lap81-crop-top.png" },
   { id: 19, name: "Street Jacket", category: "Outerwear", price: 220, image: "../assets/images/products/lap81-jacket.png" },
   { id: 20, name: "Denim Jacket", category: "Outerwear", price: 180, image: "../assets/images/products/lap81-jeans-jacket.png" },
-  { id: 23, name: "Men's Tank Top", category: "T-Shirts", price: 40, image: "../assets/images/products/lap81-men-tank-top.png" },
+  { id: 23, name: "Men's Tank Top", category: "T-Shirts", gender: "mens", price: 40, image: "../assets/images/products/lap81-men-tank-top.png" },
   { id: 24, name: "Phone Case", category: "Accessories", price: 25, image: "../assets/images/products/lap81-phone-case.png" },
   { id: 25, name: "School Bag", category: "Accessories", price: 85, image: "../assets/images/products/lap81-school-bag.png" },
   { id: 26, name: "Skateboard", category: "Accessories", price: 120, image: "../assets/images/products/lap81-skateboard.png" },
@@ -141,7 +141,6 @@ products.push(
   { id: 31, name: "Tote Bag", category: "Accessories", price: 40, image: "../assets/images/products/lap81-tote-bag.png" },
   { id: 32, name: "Classic Tee", category: "T-Shirts", price: 50, image: "../assets/images/products/lap81-tshirt.png" },
   { id: 33, name: "Wallet", category: "Accessories", price: 55, image: "../assets/images/products/lap81-wallet.png" },
-  { id: 34, name: "White Cropped Top", category: "T-Shirts", price: 65, image: "../assets/images/products/lap81-white-cropped-top.png" },
-  { id: 35, name: "Women's Tank Top", category: "T-Shirts", price: 42, image: "../assets/images/products/lap81-women-tank-top.png" }
+  { id: 35, name: "Women's Tank Top", category: "T-Shirts", gender: "womens", price: 42, image: "../assets/images/products/lap81-women-tank-top.png" }
 )
 

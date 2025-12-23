@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Render featured products on homepage
   const featuredGrid = document.getElementById("featuredProducts")
   if (featuredGrid && typeof products !== "undefined") {
-    const featured = products.slice(0, 4)
+    // The data now stores root-relative image paths ("/assets/...").
+    // For the homepage we strip the leading slash so the image path remains relative to index (i.e. "assets/...")
+    const featured = products.slice(0, 4).map(p => ({ ...p, image: p.image && p.image.startsWith('/') ? p.image.slice(1) : p.image }))
     featuredGrid.innerHTML = featured.map((product) => createProductCard(product)).join("")
   }
 

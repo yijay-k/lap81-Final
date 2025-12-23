@@ -108,7 +108,7 @@
 
       // Sizes
       const sizeOptions = document.querySelector('.size-options')
-      const sizes = product.sizes && product.sizes.length ? product.sizes : ['One Size']
+      const sizes = product.sizes && product.sizes.length ? product.sizes : ['XS','S','M','L','XL']
       sizeOptions.innerHTML = sizes.map(s => `<button class="size-option" data-size="${s}">${s}</button>`).join('')
       let selectedSize = sizes[0]
       sizeOptions.querySelectorAll('.size-option').forEach((btn) => {

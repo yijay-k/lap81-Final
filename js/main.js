@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // The data now stores root-relative image paths ("/assets/...").
     // For the homepage we strip the leading slash so the image path remains relative to index (i.e. "assets/...")
     const featured = products.slice(0, 4).map(p => ({ ...p, image: p.image && p.image.startsWith('/') ? p.image.slice(1) : p.image }))
-    featuredGrid.innerHTML = featured.map((product) => createProductCard(product)).join("")
+    featuredGrid.innerHTML = featured.map((product) => createProductCard(product,"pages/")).join("")
   }
 
   // Newsletter form
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // Create product card HTML
-function createProductCard(product, basePath = "pages/") {
+function createProductCard(product, basePath = "") {
   const priceHTML = product.salePrice
     ? `<span class="product-price-original">$${product.price}</span><span class="product-price-sale">$${product.salePrice}</span>`
     : `<span class="product-price">$${product.price}</span>`

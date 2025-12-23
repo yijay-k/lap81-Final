@@ -9,14 +9,14 @@ const team = [
     name: "Sarah Chen",
     role: "Designer",
     image: "/placeholder.svg?height=400&width=400",
-    bio: "Sarah brings over 10 years of fashion design experience to NOIR STREET. Her innovative approach to streetwear has shaped our brand's unique aesthetic.",
-    email: "sarah@noirstreet.com",
+    bio: "Sarah brings over 10 years of fashion design experience to LAP81. Her innovative approach to streetwear has shaped our brand's unique aesthetic.",
+    email: "sarah@lap81.com",
     linkedin: "linkedin.com/in/sarahchen",
     experience: [
       {
         date: "2020 - Present",
         title: "Lead Designer",
-        company: "NOIR STREET",
+        company: "LAP81",
         desc: "Leading the creative direction for all seasonal collections and collaborations.",
       },
       {
@@ -46,14 +46,14 @@ const team = [
     name: "John Martinez",
     role: "Engineer",
     image: "/placeholder.svg?height=400&width=400",
-    bio: "John is the technical backbone of NOIR STREET, building and maintaining our e-commerce platform and supply chain systems.",
-    email: "john@noirstreet.com",
+    bio: "John is the technical backbone of LAP81, building and maintaining our e-commerce platform and supply chain systems.",
+    email: "john@lap81.com",
     linkedin: "linkedin.com/in/johnmartinez",
     experience: [
       {
         date: "2021 - Present",
         title: "Lead Engineer",
-        company: "NOIR STREET",
+        company: "LAP81",
         desc: "Architecting scalable e-commerce solutions and leading the engineering team.",
       },
       {
@@ -77,13 +77,13 @@ const team = [
     role: "Toilet Scrubber",
     image: "/placeholder.svg?height=400&width=400",
     bio: "Liam keeps our headquarters spotless and running smoothly. His attention to detail and positive attitude make him an invaluable team member.",
-    email: "liam@noirstreet.com",
+    email: "liam@lap81.com",
     linkedin: "linkedin.com/in/liamoconnor",
     experience: [
       {
         date: "2022 - Present",
         title: "Facilities Specialist",
-        company: "NOIR STREET",
+        company: "LAP81",
         desc: "Maintaining pristine office conditions and ensuring a healthy work environment.",
       },
       {

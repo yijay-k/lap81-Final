@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/pages/profile.css">
 </head>
 <body>
   <!-- Navigation -->
@@ -46,6 +47,8 @@
     </div>
   </nav>
 
+
+
   <!-- Profile Page -->
   <main class="profile-page">
     <div class="profile-container">
@@ -56,17 +59,13 @@
           </svg>
         </div>
         <div class="profile-info">
-          <h1 class="profile-name" id="profileName">John Doe</h1>
-          <p class="profile-email" id="profileEmail">john@example.com</p>
+          <h1 class="profile-name" id="profileName"></h1>
+          <p class="profile-email" id="profileEmail"></p>
         </div>
         <button class="btn btn-secondary" onclick="logout()">Logout</button>
       </div>
       
-      <div class="profile-tabs">
-        <button class="profile-tab active" data-tab="details">Account Details</button>
-        <button class="profile-tab" data-tab="orders">Orders</button>
-        <button class="profile-tab" data-tab="addresses">Addresses</button>
-      </div>
+      
       
       <div class="profile-section" id="profileContent">
         <h3 class="profile-section-title">Account Details</h3>
@@ -74,26 +73,28 @@
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">First Name</label>
-              <input type="text" class="form-input" value="John">
+              <input type="text" class="form-input"  id="formFN">
             </div>
             <div class="form-group">
               <label class="form-label">Last Name</label>
-              <input type="text" class="form-input" value="Doe">
+              <input type="text" class="form-input" id="formLN">
             </div>
           </div>
           <div class="form-group">
             <label class="form-label">Email</label>
-            <input type="email" class="form-input" value="john@example.com">
+            <input type="email" class="form-input" id="formEmail" id="'formEmail">
           </div>
           <div class="form-group">
             <label class="form-label">Phone</label>
-            <input type="tel" class="form-input" placeholder="+1 (555) 000-0000">
+            <input type="tel" class="form-input" placeholder="+1 (555) 000-0000" id="formPhone">
           </div>
           <button type="submit" class="btn btn-primary">Save Changes</button>
         </form>
       </div>
     </div>
   </main>
+
+  
 
   <!-- Cart Drawer -->
   <div class="cart-overlay" id="cartOverlay"></div>
@@ -119,29 +120,93 @@
   <script src="../js/data.js"></script>
   <script src="../js/controllers/cart-controller.js"></script>
   <script>
+    const profileEmail = localStorage.getItem('user-email');
+    const profileFN = localStorage.getItem('user-FN');
+    const profileLN = localStorage.getItem('user-LN');
+    const profilePhone = localStorage.getItem('user-phone');
+    const formFN = document.getElementById('formFN');
+    const formLN = document.getElementById('formLN');
+    const formEmail = document.getElementById('formEmail');
+    const formPhone = document.getElementById('formPhone');
+    
     // Check if user is logged in
-    const user = JSON.parse(localStorage.getItem('noirUser'));
-    if (!user) {
+    if (!profileEmail) {
       window.location.href = 'login.html';
     }
     
+    // display email in profile
+    document.getElementById('profileEmail').textContent = profileEmail;
+    formEmail.value = profileEmail
+
+    // display FN and LN is undefined and ask user to set name
+    if (profileFN == undefined && profileLN == undefined) {
+      document.getElementById('profileName').textContent = '--Please set user name--'
+    }
+    else {
+      document.getElementById('profileName').textContent = profileFN + ' ' + profileLN;
+    }
+    
+    // Pre-fill variable with saved values
+    if (profileFN) {
+      formFN.value = profileFN;
+    }
+    if (profileLN) {
+      formLN.value = profileLN;
+    }
+    if (profilePhone) {
+      formPhone.value = profilePhone
+    }
+
+    //fill form FN and LN with saved data if not undefined
+    if (profileFN != undefined && profileLN != undefined) {
+      formFN.value = profileFN;
+      formLN.value = profileLN;
+    }
+
+    if (profilePhone != undefined){
+      formPhone.value = profilePhone
+    }
+    
     // Tab switching
-    document.querySelectorAll('.profile-tab').forEach(tab => {
+    document.querySelectorAll('.section-button').forEach(tab => {
       tab.addEventListener('click', () => {
-        document.querySelectorAll('.profile-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.section-button').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
       });
     });
     
     function logout() {
-      localStorage.removeItem('noirUser');
+      localStorage.removeItem('user-email');
+      localStorage.removeItem('user-FN');
+      localStorage.removeItem('user-LN');
+      localStorage.removeItem('user-phone');
       window.location.href = 'login.html';
     }
     
-    document.getElementById('profileForm').addEventListener('submit', (e) => {
+    document.getElementById('profileForm').addEventListener('submit', function(e) {
       e.preventDefault();
+
+      const FNvalue = formFN.value;
+      const LNvalue = formLN.value;
+      const emailValue = formEmail.value;
+      const phoneValue = formPhone.value;
+      
+      if (!FNvalue || !LNvalue || !emailValue || !phoneValue) {
+        alert('Please fill in all details');
+        return;
+      }
+      
+      localStorage.setItem('user-FN', FNvalue);
+      localStorage.setItem('user-LN', LNvalue);
+      localStorage.setItem('user-email', emailValue);
+      localStorage.setItem('user-phone', phoneValue);
+
+      
       alert('Profile updated!');
+      window.location.href = 'profile.html';
     });
+
+    
   </script>
 </body>
 </html>

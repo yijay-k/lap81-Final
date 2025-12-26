@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,14 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages/shop.css">
   <link rel="stylesheet" href="../css/pages/cart.css">
+  <link rel="stylesheet" href="../css/pages/checkout.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <!-- Navigation -->
   <nav class="nav" id="nav">
@@ -33,7 +38,8 @@
     <div class="nav-actions">
       <a href="profile.html" class="nav-icon-btn">
         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="10" cy="6" r="4"/><path d="M2 20v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+          <circle cx="10" cy="6" r="4" />
+          <path d="M2 20v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2" />
         </svg>
       </a>
     </div>
@@ -43,8 +49,8 @@
   <main class="checkout-page">
     <div class="checkout-container">
       <div class="checkout-form-wrapper">
-        <h1 class="page-title" style="text-align: left; padding: 0; margin-bottom: 40px;">Checkout</h1>
-        
+        <h1 class="page-title">Checkout</h1>
+
         <form id="checkoutForm">
           <div class="checkout-section">
             <h3 class="checkout-section-title">Contact Information</h3>
@@ -57,7 +63,7 @@
               <input type="tel" class="form-input" placeholder="+1 (555) 000-0000" required>
             </div>
           </div>
-          
+
           <div class="checkout-section">
             <h3 class="checkout-section-title">Shipping Address</h3>
             <div class="form-row">
@@ -99,7 +105,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="checkout-section">
             <h3 class="checkout-section-title">Payment</h3>
             <div class="form-group">
@@ -121,11 +127,11 @@
               <input type="text" class="form-input" placeholder="John Doe" required>
             </div>
           </div>
-          
+
           <button type="submit" class="btn btn-primary btn-full">Complete Order</button>
         </form>
       </div>
-      
+
       <div class="checkout-summary">
         <div class="summary-box">
           <h3 class="summary-title">Order Summary</h3>
@@ -168,12 +174,12 @@
     document.addEventListener('DOMContentLoaded', () => {
       const cart = JSON.parse(localStorage.getItem('noirCart')) || [];
       const summaryItems = document.getElementById('summaryItems');
-      
+
       if (cart.length === 0) {
         window.location.href = 'shop.html';
         return;
       }
-      
+
       // Render items
       summaryItems.innerHTML = cart.map(item => `
         <div class="summary-item">
@@ -185,22 +191,22 @@
           <div class="summary-item-price">$${item.price * item.qty}</div>
         </div>
       `).join('');
-      
+
       // Calculate totals
       const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
       const shipping = subtotal >= 150 ? 0 : 15;
       const tax = Math.round(subtotal * 0.08);
       const total = subtotal + shipping + tax;
-      
+
       document.getElementById('summarySubtotal').textContent = `$${subtotal}`;
       document.getElementById('summaryShipping').textContent = shipping === 0 ? 'Free' : `$${shipping}`;
       document.getElementById('summaryTax').textContent = `$${tax}`;
       document.getElementById('summaryTotal').textContent = `$${total}`;
-      
+
       // Form submit
       document.getElementById('checkoutForm').addEventListener('submit', (e) => {
         e.preventDefault();
-        localStorage.setItem('noirLastOrder', JSON.stringify({ 
+        localStorage.setItem('noirLastOrder', JSON.stringify({
           id: 'NS' + Math.random().toString(36).substr(2, 9).toUpperCase(),
           total: total,
           date: new Date().toLocaleDateString()
@@ -211,4 +217,5 @@
     });
   </script>
 </body>
+
 </html>

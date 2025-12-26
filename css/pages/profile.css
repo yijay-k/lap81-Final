@@ -1,0 +1,25 @@
+main {
+    position: absolute;
+    inset: 5%;
+    margin-top: 8em;
+}
+.profile-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-info,.btn-secondary{
+    margin: 2%;
+}
+
+.btn-primary {
+    margin-bottom: 5%;
+}
+
+#profileName{
+    color: var(--accent);
+    font-weight: bolder;
+}

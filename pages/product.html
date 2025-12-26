@@ -30,12 +30,17 @@
     .size-option { padding: 12px 24px; border: 1px solid var(--muted); border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; }
     .size-option:hover, .size-option.selected { background-color: var(--accent); color: #fff; }
     .add-to-cart-btn { padding: 16px 32px; font-size: 18px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; }
-    .add-to-cart-btn { background-color: var(--accent); color: #fff; }
-    .add-to-cart-btn:hover { background-color: #000; }
+    .add-to-cart-btn { background-color: var(--accent); color: #fff;}
+    .add-to-cart-btn:hover { background-color: #000;}
+    .exit-btn{border: none; background-color: black; color: white; margin: 0; padding: 3%;}
+    .exit-btn:hover{color:var(--accent); font-weight: bolder;} 
+    
   </style>
 </head>
 <body>
+  <button onclick="history.back()" class="exit-btn"> ← Go Back </button>
   <div class="product-page">
+    
     <div class="product-container">
       <div class="product-gallery">
         <img src="https://via.placeholder.com/300x400" alt="Product Image" class="product-main-img">

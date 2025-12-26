@@ -49,10 +49,10 @@
         <p class="auth-subtitle">Sign in to access your account</p>
       </div>
       
-      <form class="auth-form" id="loginForm">
+      <form class="auth-form" id="loginForm" action="profile.html" method="post">
         <div class="form-group">
           <label class="form-label">Email</label>
-          <input type="email" class="form-input" placeholder="your@email.com" required>
+          <input type="email" class="form-input" id="email-input" placeholder="your@email.com" required>
         </div>
         
         <div class="form-group">
@@ -117,13 +117,28 @@
 
   <script src="../js/data.js"></script>
   <script src="../js/controllers/cart-controller.js"></script>
+  
   <script>
-    document.getElementById('loginForm').addEventListener('submit', (e) => {
+    const form = document.getElementById('loginForm');
+    const email = document.getElementById('email-input');
+
+    //clear local storage data
+    localStorage.removeItem('user-email');
+    localStorage.removeItem('user-FN');
+    localStorage.removeItem('user-LN');
+
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
+
+      const emailValue = email.value;
       // Simulate login
-      localStorage.setItem('noirUser', JSON.stringify({ email: 'user@example.com', name: 'John Doe' }));
+      localStorage.setItem('user-email',emailValue);
+
       window.location.href = 'profile.html';
     });
   </script>
+
+
 </body>
 </html>
+  

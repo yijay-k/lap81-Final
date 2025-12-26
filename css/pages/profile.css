@@ -18,3 +18,8 @@ main {
 .btn-primary {
     margin-bottom: 5%;
 }
+
+#profileName{
+    color: var(--accent);
+    font-weight: bolder;
+}

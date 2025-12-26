@@ -82,7 +82,7 @@
           </div>
           <div class="form-group">
             <label class="form-label">Email</label>
-            <input type="email" class="form-input" id="formEmail" id="'formEmail">
+            <input type="email" class="form-input" id="formEmail">
           </div>
           <div class="form-group">
             <label class="form-label">Phone</label>
@@ -190,14 +190,17 @@
       const LNvalue = formLN.value;
       const emailValue = formEmail.value;
       const phoneValue = formPhone.value;
+
+      const FNupper = FNvalue.toUpperCase();
+      const LNupper = LNvalue.toUpperCase();
       
       if (!FNvalue || !LNvalue || !emailValue || !phoneValue) {
         alert('Please fill in all details');
         return;
       }
       
-      localStorage.setItem('user-FN', FNvalue);
-      localStorage.setItem('user-LN', LNvalue);
+      localStorage.setItem('user-FN', FNupper);
+      localStorage.setItem('user-LN', LNupper);
       localStorage.setItem('user-email', emailValue);
       localStorage.setItem('user-phone', phoneValue);
 

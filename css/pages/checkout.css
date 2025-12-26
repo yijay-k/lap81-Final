@@ -1,0 +1,189 @@
+/* Checkout Page Layout */
+
+.checkout-page {
+  padding-top: 120px;
+  /* Space for fixed nav + banner */
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  gap: 64px;
+  position: relative;
+}
+
+/* Left Column: Form */
+.checkout-form-wrapper {
+  flex: 1;
+  /* Takes up remaining space */
+  min-width: 0;
+  /* Prevents overflow issues */
+}
+
+.checkout-page .page-title {
+  text-align: left;
+  margin-bottom: 48px;
+  font-size: 48px;
+}
+
+.checkout-section {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.checkout-section:last-child {
+  border-bottom: none;
+}
+
+.checkout-section-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Right Column: Summary */
+.checkout-summary {
+  width: 400px;
+  flex-shrink: 0;
+}
+
+.summary-box {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 32px;
+  position: sticky;
+  top: 140px;
+  /* Space for nav + banner */
+  border-radius: var(--radius);
+}
+
+.summary-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.summary-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 24px;
+  padding-right: 8px;
+  /* Space for scrollbar */
+}
+
+/* Custom Scrollbar for summary items */
+.summary-items::-webkit-scrollbar {
+  width: 4px;
+}
+
+.summary-items::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.summary-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.summary-item-img {
+  width: 64px;
+  height: 80px;
+  object-fit: cover;
+  background: var(--surface-light);
+  border-radius: var(--radius);
+}
+
+.summary-item-info {
+  flex: 1;
+}
+
+.summary-item-name {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.summary-item-variant {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.summary-item-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.summary-row.total {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .checkout-container {
+    flex-direction: column-reverse;
+    /* Summary on top for mobile, or bottom? detailed design decision. Usually bottom or collapsible. Let's keep it simplae: vertical stack. */
+    flex-direction: column;
+    padding: 0 24px;
+  }
+
+  .checkout-summary {
+    width: 100%;
+  }
+
+  .summary-box {
+    position: static;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

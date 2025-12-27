@@ -136,6 +136,68 @@ img { max-width: 100%; height: auto; display: block; }
   .nav-overlay.visible { display: block; }
 }
 
+/* Product preview modal (mobile) */
+.product-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.product-modal.visible { display: flex; }
+
+.product-modal .modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.product-modal .modal-content {
+  position: relative;
+  max-width: 680px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  z-index: 2001;
+  background: var(--bg);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-modal .modal-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-modal .modal-actions {
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-modal .btn-close {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.product-modal .btn-details {
+  display: inline-flex;
+}
+
+@media (max-width: 480px) {
+  .product-modal .modal-content { border-radius: 12px; }
+  .product-modal .modal-actions { padding: 12px; }
+}
+
 /* Make input elements and buttons more touch-friendly on small screens */
 @media (max-width: 480px) {
   .form-input, .form-select, .form-textarea { padding: 12px; font-size: 15px; }

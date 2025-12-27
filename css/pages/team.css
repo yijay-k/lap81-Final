@@ -23,13 +23,9 @@
 .team-img-wrapper {
   aspect-ratio: 1;
   overflow: hidden;
-  filter: grayscale(100%);
-  transition: filter var(--transition-med);
 }
 
-.team-card:hover .team-img-wrapper {
-  filter: grayscale(0%);
-}
+
 
 .team-img {
   width: 100%;

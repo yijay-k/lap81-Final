@@ -74,40 +74,22 @@ const team = [
   {
     id: "low-jian-jie",
     name: "Low Jian Jie",
-    role: "Toilet Scrubber",
     image: "/assets/images/low-jian-jie.jpg",
-    bio: "Low Jian Jie keeps our headquarters spotless and running smoothly. His attention to detail and positive attitude make him an invaluable team member.",
-    email: "low@lap81.com",
-    linkedin: "linkedin.com/in/lowjianjie",
-    experience : [
-      {
-        date: "2022 - Present",
-        title: "Facilities Specialist",
-        company: "LAP81",
-        desc: "Maintaining pristine office conditions and ensuring a healthy work environment.",
-      },
-      {
-        date: "2019 - 2022",
-        title: "Senior Custodian",
-        company: "CleanPro Services",
-        desc: "Managed cleaning operations for multiple commercial properties.",
-      },
-      {
-        date: "2016 - 2019",
-        title: "Maintenance Associate",
-        company: "City Mall Complex",
-        desc: "Handled daily cleaning and minor maintenance tasks for retail spaces.",
-      },
-    ],
-    skills: [
-      "Sanitation Protocols",
-      "Equipment Maintenance",
-      "OSHA Compliance",
-      "Green Cleaning",
-      "Time Management",
-      "Problem Solving",
-    ],
-  },
+    bio: "Hi, I’m Low Jian Jie. I have 2 years of coding experience in my college and university. I’m a cooperative and friendly but introverted person. I always make sure to finish my assignments on time and perfectly. Besides that, I am also a skilled artist. I designed logos and icons for my websites.",
+    personalInfo: {
+      birthday: "30 October 2006",
+      hobbies: ["Drawing", "Listening to music", "Singing", "Play games"],
+    },
+    education: {
+      school: "Sunway University",
+      studentId: "25012915",
+      intake: "FEB 2025",
+      programme: "Bachelor of Computer Science",
+      yearSemester: "Year 1 Semester 3",
+      codingLanguages: ["HTML","CSS","JavaScript","Java","Python","SQL"],
+    },
+    assignments: ["Log in page", "Profile page", "Designed logo for website"],
+  }
 ]
 
 // Categories

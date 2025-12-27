@@ -5,13 +5,13 @@ const products = []
 // Team Data
 const team = [
   {
-    id: "sarah",
-    name: "Sarah Chen",
+    id: "koh-yi-jay",
+    name: "Koh Yi Jay",
     role: "Designer",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "Sarah brings over 10 years of fashion design experience to LAP81. Her innovative approach to streetwear has shaped our brand's unique aesthetic.",
-    email: "sarah@lap81.com",
-    linkedin: "linkedin.com/in/sarahchen",
+    image: "/assets/images/koh-yi-jay.jpeg",
+    bio: "Koh brings over 10 years of fashion design experience to LAP81. Her innovative approach to streetwear has shaped our brand's unique aesthetic.",
+    email: "koh@lap81.com",
+    linkedin: "linkedin.com/in/kohyijay",
     experience: [
       {
         date: "2020 - Present",

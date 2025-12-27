@@ -72,14 +72,14 @@ const team = [
     skills: ["JavaScript", "React", "Node.js", "Python", "AWS", "PostgreSQL", "System Architecture"],
   },
   {
-    id: "liam",
-    name: "Liam O'Connor",
+    id: "low-jian-jie",
+    name: "Low Jian Jie",
     role: "Toilet Scrubber",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "Liam keeps our headquarters spotless and running smoothly. His attention to detail and positive attitude make him an invaluable team member.",
-    email: "liam@lap81.com",
-    linkedin: "linkedin.com/in/liamoconnor",
-    experience: [
+    image: "/assets/images/low-jian-jie.jpg",
+    bio: "Low Jian Jie keeps our headquarters spotless and running smoothly. His attention to detail and positive attitude make him an invaluable team member.",
+    email: "low@lap81.com",
+    linkedin: "linkedin.com/in/lowjianjie",
+    experience : [
       {
         date: "2022 - Present",
         title: "Facilities Specialist",

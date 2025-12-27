@@ -7,35 +7,40 @@ const team = [
   {
     id: "koh-yi-jay",
     name: "Koh Yi Jay",
-    role: "Software engineer | Web3 Developer",
+    role: "Designer",
     image: "/assets/images/koh-yi-jay.jpeg",
-    bio: "First-year Computer Science student at Sunway University gaining hands-on Web3 development experience at Techtics Solutions. Developing skills in Solidity, Hardhat, NestJS, Laravel, and Vue.js through real-world projects including NFT tokenization and gamified platforms. Currently learning from collaboration with Hata Exchange (licensed cryptocurrency exchange) development.",
-    contact: {
-      phone: "+60 125279176",
-      email: "kohyijay6@gmail.com",
-      linkedin: "www.linkedin.com/in/yijay-koh"
-    },
-    education: [
-      { year: "2024", school: "Taylors University", degree: "Foundation in Computer Science" },
-      { year: "2025 - 2028 (In Progress)", school: "Sunway University", degree: "Bachelor of Computer Science" }
-    ],
-    technicalSkills: ["Node.js","NestJS","Laravel (PHP)","PHP","Solidity","Hardhat","PostgreSQL","Golang","Vue.js","JavaScript","Tailwind CSS"],
-    softSkills: ["Presentation","Public Speaking","Cross-team Collaboration"],
-    workExperience: [
+    bio: "Koh brings over 10 years of fashion design experience to LAP81. Her innovative approach to streetwear has shaped our brand's unique aesthetic.",
+    email: "koh@lap81.com",
+    linkedin: "linkedin.com/in/kohyijay",
+    experience: [
       {
-        date: "July 2024 – Present",
-        location: "Malaysia",
-        details: [
-          "Developed smart contracts using Solidity and Hardhat for XAC Auction (NFT art tokenization) and BYIN.asia (gamified trading education platform)",
-          "Built backend systems with NestJS, Node.js, PostgreSQL, and Golang for Hata Exchange admin panel",
-          "Created frontend interfaces using Vue.js, JavaScript, and Tailwind CSS",
-          "Presented to clients and stakeholders on technical solutions and product features; contributed to business development and partnership discussions",
-          "Applied AI tools to enhance development efficiency"
-        ]
-      }
+        date: "2020 - Present",
+        title: "Lead Designer",
+        company: "LAP81",
+        desc: "Leading the creative direction for all seasonal collections and collaborations.",
+      },
+      {
+        date: "2016 - 2020",
+        title: "Senior Designer",
+        company: "Urban Collective",
+        desc: "Designed menswear and womens streetwear collections for global markets.",
+      },
+      {
+        date: "2013 - 2016",
+        title: "Junior Designer",
+        company: "MODE Studio",
+        desc: "Started career creating technical specs and assisting with runway shows.",
+      },
     ],
-    extracurriculars: ["Sunway Blockchain Club - Events Team & Business Development (2024 - Present): Organize and coordinate blockchain and Web3 educational events and workshops; handle business development activities including client outreach and partnership discussions; engage with Malaysia's blockchain community and industry professionals"]
-  }
+    skills: [
+      "Fashion Design",
+      "Pattern Making",
+      "Adobe Creative Suite",
+      "3D CLO",
+      "Trend Forecasting",
+      "Sustainable Design",
+    ],
+  },
   {
     id: "john",
     name: "John Martinez",

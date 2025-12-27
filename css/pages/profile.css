@@ -1,25 +1,104 @@
-main {
-    position: absolute;
-    inset: 5%;
-    margin-top: 8em;
+/* Profile / CV page styles — modernized */
+main.cv-page {
+  padding: 4rem 1.25rem;
+  margin: 0 auto;
+  max-width: 1100px;
 }
-.profile-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+.cv-container {
+  background: var(--panel, #fff);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(7, 10, 25, 0.08);
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.cv-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.cv-photo {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(7, 10, 25, 0.08);
+  border: 4px solid rgba(0,0,0,0.03);
+  flex-shrink: 0;
+}
+
+.cv-intro {
+  flex: 1;
+}
+
+.cv-name {
+  font-size: 1.6rem;
+  margin: 0 0 0.25rem 0;
+  color: var(--accent, #0070f3);
+  letter-spacing: -0.02em;
+}
+
+.cv-bio {
+  margin: 0;
+  color: var(--muted, #4b5563);
+  line-height: 1.45;
+}
+
+.cv-section {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.cv-section-title {
+  font-size: 1.05rem;
+  margin: 0 0 0.75rem 0;
+  color: var(--text, #0f172a);
+}
+
+.cv-item {
+  display: block;
+}
+
+.cv-item-content p, .cv-item-content ul {
+  margin: 0 0 0.6rem 0;
+  color: var(--muted, #475569);
+}
+
+.cv-skills {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.cv-skill {
+  background: rgba(0,0,0,0.04);
+  color: var(--text, #0f172a);
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-size: .85rem;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .cv-header {
+    flex-direction: row;
+    gap: 1rem;
     align-items: center;
-    text-align: center;
+  }
+  .cv-photo {
+    width: 96px;
+    height: 96px;
+  }
+  main.cv-page { padding: 2rem 0.75rem; }
 }
 
-.profile-info,.btn-secondary{
-    margin: 2%;
-}
+/* Utility tweaks */
+.section-link { color: var(--accent, #0070f3); text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; }
 
-.btn-primary {
-    margin-bottom: 5%;
-}
-
-#profileName{
-    color: var(--accent);
-    font-weight: bolder;
-}
+/* Backwards compatibility: keep old selectors working */
+.profile-header { display: block; }
+#profileName { color: var(--accent); font-weight: 700; }

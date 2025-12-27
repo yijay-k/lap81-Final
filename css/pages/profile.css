@@ -6,9 +6,10 @@ main.cv-page {
 }
 
 .cv-container {
-  background: var(--panel, #fff);
+  background: #0b0f14; /* deep near-black */
+  color: #d6e9f8; /* soft off-white */
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(7, 10, 25, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
   overflow: hidden;
   padding: 2rem;
 }
@@ -25,8 +26,8 @@ main.cv-page {
   height: 128px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(7, 10, 25, 0.08);
-  border: 4px solid rgba(0,0,0,0.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  border: 3px solid rgba(255,255,255,0.04);
   flex-shrink: 0;
 }
 
@@ -37,26 +38,26 @@ main.cv-page {
 .cv-name {
   font-size: 1.6rem;
   margin: 0 0 0.25rem 0;
-  color: var(--accent, #0070f3);
+  color: var(--accent, #76a9ff);
   letter-spacing: -0.02em;
 }
 
 .cv-bio {
   margin: 0;
-  color: var(--muted, #4b5563);
+  color: #c7d9e8; /* readable, not pure white */
   line-height: 1.45;
 }
 
 .cv-section {
   margin-top: 1.25rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(15, 23, 42, 0.04);
+  border-top: 1px solid rgba(255,255,255,0.03);
 }
 
 .cv-section-title {
   font-size: 1.05rem;
   margin: 0 0 0.75rem 0;
-  color: var(--text, #0f172a);
+  color: #a9d1ff; /* subtle light heading */
 }
 
 .cv-item {
@@ -65,7 +66,7 @@ main.cv-page {
 
 .cv-item-content p, .cv-item-content ul {
   margin: 0 0 0.6rem 0;
-  color: var(--muted, #475569);
+  color: #bcd0dd; /* body text on dark bg */
 }
 
 .cv-skills {
@@ -75,12 +76,15 @@ main.cv-page {
 }
 
 .cv-skill {
-  background: rgba(0,0,0,0.04);
-  color: var(--text, #0f172a);
+  background: rgba(255,255,255,0.04);
+  color: #eaf6ff;
   padding: .35rem .6rem;
   border-radius: 999px;
   font-size: .85rem;
+  border: 1px solid rgba(255,255,255,0.03);
 }
+
+.section-link { color: #76a9ff; text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; }
 
 /* Responsive */
 @media (max-width: 720px) {

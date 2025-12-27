@@ -45,13 +45,13 @@ const team = [
   },
 
   {
-    id: "john",
-    name: "John Martinez",
-    role: "Engineer",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "John is the technical backbone of LAP81, building and maintaining our e-commerce platform and supply chain systems.",
-    email: "john@lap81.com",
-    linkedin: "linkedin.com/in/johnmartinez",
+    id: "low-jian-wei",
+    name: "Low Jian Wei",
+    role: "Lead Engineer",
+    image: "/assets/images/low-jian-wei.jpg",
+    bio: "Low Jian Wei is the technical backbone of LAP81, building and maintaining our e-commerce platform and supply chain systems.",
+    email: "low.jian.wei@lap81.com",
+    linkedin: "linkedin.com/in/lowjianwei",
     experience: [
       {
         date: "2021 - Present",
@@ -74,6 +74,7 @@ const team = [
     ],
     skills: ["JavaScript", "React", "Node.js", "Python", "AWS", "PostgreSQL", "System Architecture"],
   },
+
   {
     id: "low-jian-jie",
     name: "Low Jian Jie",

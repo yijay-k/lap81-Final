@@ -7,7 +7,6 @@ const team = [
   {
     id: "koh-yi-jay",
     name: "Koh Yi Jay",
-    role: "Software Engineer | Web3 Developer",
     image: "/assets/images/koh-yi-jay.jpeg",
     bio: "Software engineer and Web3 developer. First-year Computer Science student at Sunway University gaining hands-on Web3 development experience at Techtics Solutions.",
     contact: {

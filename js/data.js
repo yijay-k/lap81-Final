@@ -47,33 +47,28 @@ const team = [
   {
     id: "low-jian-wei",
     name: "Low Jian Wei",
-    role: "Lead Engineer",
     image: "/assets/images/low-jian-wei.jpg",
-    bio: "Low Jian Wei is the technical backbone of LAP81, building and maintaining our e-commerce platform and supply chain systems.",
-    email: "low.jian.wei@lap81.com",
-    linkedin: "linkedin.com/in/lowjianwei",
-    experience: [
-      {
-        date: "2021 - Present",
-        title: "Lead Engineer",
-        company: "LAP81",
-        desc: "Architecting scalable e-commerce solutions and leading the engineering team.",
-      },
-      {
-        date: "2018 - 2021",
-        title: "Full Stack Developer",
-        company: "TechFlow Inc",
-        desc: "Built custom web applications for retail and fashion industry clients.",
-      },
-      {
-        date: "2015 - 2018",
-        title: "Frontend Developer",
-        company: "Digital Agency Co",
-        desc: "Created responsive websites and interactive experiences for brands.",
-      },
-    ],
-    skills: ["JavaScript", "React", "Node.js", "Python", "AWS", "PostgreSQL", "System Architecture"],
+    personalInfo: {
+      birthday: "23 November 2007",
+      hobbies: ["Drumming","Table Tennis","Badminton","Listening to music","Driving","Boxing"]
+    },
+    education: {
+      school: "Sunway University",
+      period: "2025 - 2028",
+      programme: "Bachelor of Computer Science"
+    },
+    codingLanguages: ["Python","Java","HTML","CSS","JavaScript","C++","SQL"],
+    contributions: ["Men, Women, Unisex, Team page","Use AI to generate images for the entire webpage","Create product details","Portfolio page for everyone"],
+    achievements: [
+      "Developed a student course enrollment system using Python to manage student and course data",
+      "Created a student attendance tracking system using Python to analyze attendance records",
+      "Designed and built an Arduino robot car capable of multi-directional movement and obstacle avoidance using ultrasonic sensors",
+      "Developed a simple e-commerce product page with dynamic product display and navigation using JavaScript",
+      "Completed a hands-on Arduino programming course on Udemy"
+    ]
   },
+
+
 
   {
     id: "low-jian-jie",

@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navLinks = nav.querySelector('.nav-links');
 
-  // Create toggle button
   const btn = document.createElement('button');
   btn.type = 'button';
   btn.className = 'nav-toggle';
@@ -15,10 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   btn.setAttribute('aria-expanded', 'false');
   btn.innerHTML = '<span class="hamburger"><span></span><span></span><span></span></span>';
 
-  // Insert before actions so it's visible on the right
   nav.insertBefore(btn, nav.querySelector('.nav-actions'));
 
-  // Create an overlay for closing when clicking outside
   const overlay = document.createElement('div');
   overlay.className = 'nav-overlay';
   document.body.appendChild(overlay);
@@ -43,12 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   overlay.addEventListener('click', closeNav);
 
-  // Close on escape
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeNav();
   });
 
-  // Close when a link is clicked (mobile behavior)
   if (navLinks) {
     navLinks.addEventListener('click', (e) => {
       const target = e.target;

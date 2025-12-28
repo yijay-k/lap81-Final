@@ -1,12 +1,3 @@
-// Shop Controller
-// Use the global `products` array (from js/data.js) and the shared `createProductCard` in main.js.
-// Avoid redeclaring products or createProductCard here so the Shop uses the single source of truth.
-
-// If you'd like a custom short card for the shop, we can use the global one. Otherwise we could
-// define a specialized `renderShopCard(product)` function here — for now the controller will
-// assume `createProductCard(product)` is available globally.
-
-
 const ShopController = {
   currentCategory: "all",
   currentSort: "newest",
@@ -72,7 +63,7 @@ const ShopController = {
         filtered.sort((a, b) => (b.salePrice || b.price) - (a.salePrice || a.price))
         break
       default:
-        // Newest - keep original order
+        // Newest
         break
     }
 

@@ -1,18 +1,10 @@
-// Main JavaScript
-// Globals: `products` (from `js/data.js`) and `CartController` (from `js/controllers/cart-controller.js`)
-// are provided by other scripts and should not be re-declared here.
-
 document.addEventListener("DOMContentLoaded", () => {
-  // Render featured products on homepage
   const featuredGrid = document.getElementById("featuredProducts")
   if (featuredGrid && typeof products !== "undefined") {
-    // The data now stores root-relative image paths ("/assets/...").
-    // For the homepage we strip the leading slash so the image path remains relative to index (i.e. "assets/...")
     const featured = products.slice(0, 4).map(p => ({ ...p, image: p.image && p.image.startsWith('/') ? p.image.slice(1) : p.image }))
     featuredGrid.innerHTML = featured.map((product) => createProductCard(product)).join("")
   }
 
-  // Newsletter form
   const newsletterForm = document.getElementById("newsletterForm")
   if (newsletterForm) {
     newsletterForm.addEventListener("submit", (e) => {
@@ -25,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Scroll animations
   initScrollAnimations()
 
-  // Set correct active nav link based on URL (keeps tabs consistent across pages)
   const setActiveNavLink = () => {
     const current = location.pathname.split('/').pop() || 'index.html'
     document.querySelectorAll('.nav-links a').forEach((a) => {

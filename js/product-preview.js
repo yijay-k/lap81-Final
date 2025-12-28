@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Build modal and append to body
   const modal = document.createElement('div');
   modal.className = 'product-modal';
   modal.innerHTML = `
@@ -63,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Only intercept on mobile widths
     if (window.innerWidth > 768) return;
 
-    // Prevent navigation and show preview
     e.preventDefault();
 
     const imgEl = card.querySelector('.product-img');

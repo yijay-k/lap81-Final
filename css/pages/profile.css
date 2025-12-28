@@ -7,9 +7,7 @@ main.cv-page {
 
 .cv-container {
   background: #0b0f14;
-  /* deep near-black */
   color: #d6e9f8;
-  /* soft off-white */
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
   overflow: hidden;
@@ -47,7 +45,6 @@ main.cv-page {
 .cv-bio {
   margin: 0;
   color: #c7d9e8;
-  /* readable, not pure white */
   line-height: 1.45;
 }
 
@@ -61,7 +58,6 @@ main.cv-page {
   font-size: 1.05rem;
   margin: 0 0 0.75rem 0;
   color: #a9d1ff;
-  /* subtle light heading */
 }
 
 .cv-item {
@@ -72,7 +68,6 @@ main.cv-page {
 .cv-item-content ul {
   margin: 0 0 0.6rem 0;
   color: #bcd0dd;
-  /* body text on dark bg */
 }
 
 .cv-skills {

@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mens — LAP81</title>
+  <title>Contact Us — LAP81</title>
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/animations.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/components.css">
-  <link rel="stylesheet" href="../css/pages/shop.css">
-  <link rel="stylesheet" href="../css/pages/cart.css">
+  <link rel="stylesheet" href="../css/pages/contact.css">
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,12 +24,12 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="shop.html">Shop</a></li>
-      <li><a href="mens.html" class="active">Mens</a></li>
+      <li><a href="mens.html">Mens</a></li>
       <li><a href="womens.html">Womens</a></li>
       <li><a href="unisex.html">Unisex</a></li>
       <li><a href="sale.html">Sale</a></li>
       <li><a href="team.html">Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
     <div class="nav-actions">
       <a href="profile.html" class="nav-icon-btn">
@@ -48,16 +47,47 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="page-header">
-    <h1 class="page-title">Mens Collection</h1>
-    <p class="page-subtitle">Premium streetwear designed for the modern man</p>
-  </header>
+  <!-- Contact Page (Styled like Auth Page) -->
+  <main class="contact-page">
+    <div class="contact-container">
+      <div class="contact-header">
+        <h1 class="contact-title">Get in Touch</h1>
+        <p class="contact-subtitle">Have a question? We'd love to hear from you.</p>
+      </div>
 
-  <!-- Products -->
-  <section class="section" style="padding-top: 0;">
-    <div class="product-grid" id="mensGrid"></div>
-  </section>
+      <div class="form-success" id="successMessage">
+        Thank you for your message! We'll get back to you shortly.
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" class="form-input" placeholder="Your name">
+          <span class="form-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="your@email.com">
+          <span class="form-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" class="form-input" placeholder="What is this regarding?">
+          <span class="form-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-textarea" placeholder="How can we help you?"></textarea>
+          <span class="form-error"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+      </form>
+    </div>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -133,13 +163,6 @@
   <script src="../js/controllers/cart-controller.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/mobile-nav.js" defer></script>
-  <script src="../js/product-preview.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const grid = document.getElementById('mensGrid');
-      const mensProducts = products.filter(p => p.gender === 'mens' || p.gender === 'unisex');
-      grid.innerHTML = mensProducts.map(product => createProductCard(product, '')).join('');
-    });
-  </script>
+  <script src="../js/contact.js" defer></script>
 </body>
 </html>
